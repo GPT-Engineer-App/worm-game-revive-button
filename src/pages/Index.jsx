@@ -112,8 +112,17 @@ const Index = () => {
         ))}
         <Box position="absolute" left={`${food.x * cellSize}px`} top={`${food.y * cellSize}px`} width={`${cellSize}px`} height={`${cellSize}px`} bg="red.500" />
       </Box>
-      <Button colorScheme="blue" mt="4" onClick={moveSnake}>
-        Move Snake
+      <Button colorScheme="blue" mt="4" onClick={() => setDirection(DIRECTIONS.UP)}>
+        Up
+      </Button>
+      <Button colorScheme="blue" mt="4" onClick={() => setDirection(DIRECTIONS.DOWN)}>
+        Down
+      </Button>
+      <Button colorScheme="blue" mt="4" onClick={() => setDirection(DIRECTIONS.LEFT)}>
+        Left
+      </Button>
+      <Button colorScheme="blue" mt="4" onClick={() => setDirection(DIRECTIONS.RIGHT)}>
+        Right
       </Button>
       {isGameOver && (
         <Button colorScheme="teal" mt="4" onClick={restartGame}>
